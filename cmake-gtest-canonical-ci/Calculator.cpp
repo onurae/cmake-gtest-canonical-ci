@@ -2,5 +2,5 @@
 
 int Calculator::Square(int i) const
 {
-    return i * i * i;
+    return i * i;
 }
