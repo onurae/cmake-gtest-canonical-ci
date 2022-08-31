@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "Calculator.hpp"
 
-TEST(SquareTest, SquarePositiveInput)
+TEST(SquareTest, PositiveInput)
 {
     Calculator calc;
     int i{ 9 };
@@ -9,7 +9,7 @@ TEST(SquareTest, SquarePositiveInput)
     EXPECT_EQ(i * i, r);
 }
 
-TEST(SquareTest, SquareZeroInput)
+TEST(SquareTest, ZeroInput)
 {
     Calculator calc;
     int i{ 0 };
@@ -17,7 +17,7 @@ TEST(SquareTest, SquareZeroInput)
     EXPECT_EQ(0, r);
 }
 
-TEST(SquareTest, SquareNegativeInput)
+TEST(SquareTest, NegativeInput)
 {
     Calculator calc;
     int i{ -2 };
