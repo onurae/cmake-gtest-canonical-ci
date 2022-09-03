@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Static library
 file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/${PROJECT_NAME}/*.?pp)
 list(FILTER SOURCES EXCLUDE REGEX ".test.cpp")
-add_library(calculator STATIC ${SOURCES})
+add_library(Calculator STATIC ${SOURCES})
 
 # Google test
 include(FetchContent)
@@ -31,12 +31,12 @@ enable_testing()
 
 # Unit test project
 file(GLOB TEST_SOURCES ${PROJECT_NAME}/*.test.cpp)
-add_executable(calculator-test ${TEST_SOURCES})
-target_link_libraries(calculator-test
-    PRIVATE calculator
+add_executable(CalculatorTest ${TEST_SOURCES})
+target_link_libraries(CalculatorTest
+    PRIVATE Calculator
     PRIVATE GTest::gtest_main
 )
 
 # Enable CMake’s test runner to discover the tests
 include(GoogleTest)
-gtest_discover_tests(calculator-test)
+gtest_discover_tests(CalculatorTest)
