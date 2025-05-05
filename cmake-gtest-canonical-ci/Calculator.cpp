@@ -1,4 +1,4 @@
-#include "Calculator.hpp"
+#include <cmake-gtest-canonical-ci/Calculator.hpp>
 
 int Calculator::Square(int i) const
 {

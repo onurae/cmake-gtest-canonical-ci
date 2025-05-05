@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "Calculator.hpp"
+#include <cmake-gtest-canonical-ci/Calculator.hpp>
 
 TEST(SquareTest, PositiveInput)
 {
