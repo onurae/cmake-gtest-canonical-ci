@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - name: Configure CMake
         run: cmake -S $GITHUB_WORKSPACE -B ${{runner.workspace}}/build
@@ -25,7 +25,7 @@ jobs:
         run: GTEST_OUTPUT=xml:test-results/ GTEST_COLOR=1 ctest -V
 
       - name: Upload test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: test_results_xml
